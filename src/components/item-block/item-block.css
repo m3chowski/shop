@@ -1,0 +1,45 @@
+.item-block {
+  width: 225px;
+  height: 260px;
+  outline: none;
+  border-radius: 15px;
+  border: 5px solid transparent;
+  margin: 5px;
+  padding: 5px;
+  display: grid;
+  grid-template-rows: 100px 115px;
+  cursor: pointer;
+  color: white;
+  background-color: #1e1f20;
+}
+
+.item-block img {
+  display: grid;
+  margin-left: 30px;
+  height: 100%;
+  justify-content: center;
+}
+.item-block h4 {
+  font-size: 14px;
+}
+.item-block p {
+  width: 100px;
+  font-size: 14px;
+}
+.item-block-button button {
+  height: 30px;
+  width: 90px;
+  margin-left: 150px;
+  margin-top: -50px;
+  position: absolute;
+  background-color: gray;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 99px;
+  cursor: pointer;
+}
+.item-block-button button:hover {
+  background-color: white;
+  color: gray;
+}

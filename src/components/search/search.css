@@ -1,0 +1,17 @@
+.search {
+  margin-top: 20px;
+  width: 550px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+  color: white;
+}
+.search input {
+  color: white;
+}
+.search-icon {
+  margin-top: 8px;
+  margin-left: -12px;
+  position: absolute;
+  opacity: 0.3;
+}

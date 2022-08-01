@@ -1,0 +1,29 @@
+.header {
+  padding-left: 15px;
+  padding-right: 25px;
+  display: grid;
+  grid-template-columns: 240px 1483px 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-logo {
+  margin-top: 18px;
+  padding-left: 25px;
+  height: 50px;
+  letter-spacing: 1px;
+}
+
+.header-logo h4 {
+  /* height: ; */
+  margin: auto;
+  color: #808080;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-logo h4:hover {
+  color: #808080;
+}

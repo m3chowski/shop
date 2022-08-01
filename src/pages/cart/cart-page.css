@@ -1,0 +1,18 @@
+.cart-page {
+  margin-top: 35px;
+}
+.cart-page button {
+  color: white;
+}
+.cart-page-clear {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 79px;
+}
+
+.cart-page-nav {
+  margin-top: 35px;
+  margin-left: 15px;
+  display: grid;
+  grid-template-columns: 1180px 530px 100px;
+}

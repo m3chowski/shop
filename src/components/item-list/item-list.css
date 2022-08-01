@@ -1,0 +1,10 @@
+.item-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+  /* margin-right: 50px; */
+  padding-left: 20px;
+}

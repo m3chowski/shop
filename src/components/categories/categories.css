@@ -1,0 +1,5 @@
+.categories {
+  margin-top: 10px;
+  display: grid;
+  grid-template-rows: repeat(6, 55px);
+}
