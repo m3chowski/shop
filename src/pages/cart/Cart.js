@@ -20,9 +20,9 @@ export const CartPage = () => {
         <CartItem key={obj.id} {...obj} />
       ))}
       <div className="cart-page-nav">
-        <Link to="/">
+        <Link to="/all">
           <div>
-            <Button>Back to main</Button>
+            <Button>Back to shoping</Button>
           </div>
         </Link>
         <div>

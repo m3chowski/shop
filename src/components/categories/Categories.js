@@ -4,6 +4,7 @@ import { Button } from "@mui/material";
 import { setCategory } from "../../redux/slices/categorySlice";
 import "./categories.css";
 import { Sort } from "../sort/Sort";
+import { Link } from "react-router-dom";
 
 export const Categories = () => {
   const category = [
@@ -13,27 +14,31 @@ export const Categories = () => {
     "electronic",
     "women's clothing",
   ];
+
+  // const location = useLocation();
   const { activeCategory } = useSelector((state) => state.category);
   const dispatch = useDispatch();
-  const onChangeCategory = (id) => {
-    dispatch(setCategory(id));
+  const onChangeCategory = (title) => {
+    dispatch(setCategory(title));
   };
 
   const buttonCategory = (title, index) => {
     return (
-      <Button
-        sx={
-          activeCategory === title
-            ? {
-                color: "#808080",
-              }
-            : { color: "white" }
-        }
-        key={index}
-        onClick={() => onChangeCategory(title)}
-      >
-        {title}
-      </Button>
+      <Link to={`/${title}`}>
+        <Button
+          sx={
+            activeCategory === title
+              ? {
+                  color: "#808080",
+                }
+              : { color: "white" }
+          }
+          key={index}
+          onClick={() => onChangeCategory(title)}
+        >
+          {title}
+        </Button>
+      </Link>
     );
   };
 
