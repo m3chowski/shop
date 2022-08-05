@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Button } from "@mui/material";
+
 import {
   increasedCartCount,
   reduceCartCount,
@@ -11,6 +12,7 @@ import "./cart-items.css";
 
 export const CartItem = ({ title, image, id, price, count }) => {
   const dispatch = useDispatch();
+
   const onClickPlus = () => {
     dispatch(increasedCartCount({ id }));
   };
@@ -20,6 +22,7 @@ export const CartItem = ({ title, image, id, price, count }) => {
   const onClickDeleteItem = () => {
     dispatch(removeItem(id));
   };
+
   return (
     <div className="cart-item">
       <div className="cart-item-img">

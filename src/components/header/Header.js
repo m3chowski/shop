@@ -1,11 +1,14 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+
 import { Cart } from "../cart";
 import { Search } from "../search";
+
 import "./header.css";
 
 export const Header = () => {
   const { pathname } = useLocation();
+
   return (
     <div className="header">
       <Link to="/">

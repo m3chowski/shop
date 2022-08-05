@@ -12,11 +12,13 @@ export const ItemList = () => {
   const { activeCategory, activeSort, searchValue } = useSelector(
     (state) => state.category
   );
+
   useEffect(() => {
     dispatch(fetchItems({ activeCategory, searchValue, activeSort }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeCategory, activeSort, searchValue]);
   const { items } = useSelector((state) => state.items);
+
   return (
     <div className="item-list">
       {loading
