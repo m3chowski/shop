@@ -1,10 +1,10 @@
 .item-block {
-  width: 225px;
+  width: 220px;
   height: 260px;
   outline: none;
   border-radius: 15px;
   border: 5px solid transparent;
-  margin: 5px;
+  margin: 7px;
   padding: 5px;
   display: grid;
   grid-template-rows: 100px 115px;
@@ -23,6 +23,7 @@
   font-size: 14px;
 }
 .item-block p {
+  padding: 2px;
   width: 100px;
   font-size: 14px;
 }
@@ -38,8 +39,4 @@
   border: none;
   border-radius: 99px;
   cursor: pointer;
-}
-.item-block-button button:hover {
-  background-color: white;
-  color: gray;
 }

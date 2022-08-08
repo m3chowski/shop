@@ -20,13 +20,14 @@ export const ItemBlock = ({ image, title, price, id }) => {
 
   return (
     <div>
-      <Link key={id} to={`/item/${id}`}>
-        <div className="item-block">
+      <div>
+        <Link key={id} to={`/item/${id}`} className="item-block">
           <img src={image} alt="img" />
           <h4>{title}</h4>
           <p>{price} USD</p>
-        </div>
-      </Link>
+        </Link>
+      </div>
+
       <div className="item-block-button">
         <div>
           <Button onClick={() => onClickAddToCart()}>add cart</Button>

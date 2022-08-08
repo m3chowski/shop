@@ -12,7 +12,7 @@ export const Home = () => {
   const { category } = useParams();
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(setCategory(category));
+    dispatch(setCategory(category ? category : "all"));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [category]);
 

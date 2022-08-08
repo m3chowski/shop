@@ -5,6 +5,7 @@ import { setCategory } from "../../redux/slices/categorySlice";
 import "./categories.css";
 import { Sort } from "../sort/Sort";
 import { Link } from "react-router-dom";
+import { Container } from "@mui/system";
 
 export const Categories = () => {
   const category = [
@@ -15,7 +16,6 @@ export const Categories = () => {
     "women's clothing",
   ];
 
-  // const location = useLocation();
   const { activeCategory } = useSelector((state) => state.category);
   const dispatch = useDispatch();
   const onChangeCategory = (title) => {
