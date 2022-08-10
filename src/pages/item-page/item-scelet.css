@@ -1,0 +1,8 @@
+.item-scelet {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin-top: 25px;
+  margin-left: 125px;
+  height: 250px;
+  width: 1000px;
+}
