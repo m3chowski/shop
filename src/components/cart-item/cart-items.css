@@ -1,6 +1,6 @@
 .cart-item {
   display: grid;
-  grid-template-columns: 100px 800px 350px 450px 1px;
+  grid-template-columns: 100px 800px 350px 335px 1px;
   margin-top: 10px;
   margin-left: 25px;
 }

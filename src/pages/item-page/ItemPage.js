@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { increasedCartCount } from "../../redux/slices/cartSlice";
+import ItemScelet from "./Item-Scelet";
 
 import "./item-page.css";
 
@@ -33,25 +34,25 @@ export const ItemPage = () => {
     dispatch(increasedCartCount(item));
   };
 
-  return (
-    <>
-      <div className="item-page">
-        <div className="item-page-img">
-          <img src={image} />
-        </div>
-        <div className="item-page-info">
-          <h4>{title}</h4>
-          <p>{description}</p>
-          <div>
-            <span>{price} USD</span>
-            <span>
-              <Button sx={{ color: "#808080" }} onClick={onClickAddToCart}>
-                add to cart
-              </Button>
-            </span>
-          </div>
+  return item.length !== 0 ? (
+    <div className="item-page">
+      <div className="item-page-img">
+        <img src={image} alt="Nu tipa kartinka tut doljna bit no net ee" />
+      </div>
+      <div className="item-page-info">
+        <h4>{title}</h4>
+        <p>{description}</p>
+        <div>
+          <span>{price} USD</span>
+          <span>
+            <Button sx={{ color: "#808080" }} onClick={onClickAddToCart}>
+              add to cart
+            </Button>
+          </span>
         </div>
       </div>
-    </>
+    </div>
+  ) : (
+    <ItemScelet />
   );
 };

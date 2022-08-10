@@ -4,14 +4,16 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { CartItem } from "../../components/cart-item";
 import { clearCart } from "../../redux/slices/cartSlice";
+import { EmptyCart } from "../../components/cart-empty";
 
 import "./cart-page.css";
 
 export const CartPage = () => {
   const { cartItems, totalPrice } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+  console.log(cartItems.length !== 0);
 
-  return (
+  return cartItems.length !== 0 ? (
     <div className="cart-page">
       <div className="cart-page-clear">
         <Button onClick={() => dispatch(clearCart())}>clear cart</Button>
@@ -20,7 +22,7 @@ export const CartPage = () => {
         <CartItem key={obj.id} {...obj} />
       ))}
       <div className="cart-page-nav">
-        <Link to="/all">
+        <Link to="/">
           <div>
             <Button>Back to shoping</Button>
           </div>
@@ -29,9 +31,13 @@ export const CartPage = () => {
           <p>Total price: {totalPrice.toFixed(2)} USD</p>
         </div>
         <div>
-          <Button> Order</Button>
+          <Link to="/cart/order">
+            <Button> Order</Button>
+          </Link>
         </div>
       </div>
     </div>
+  ) : (
+    <EmptyCart />
   );
 };

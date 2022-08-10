@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-
 import { Cart } from "../cart";
 import { Search } from "../search";
 
@@ -16,11 +15,13 @@ export const Header = () => {
           <h4>StoreName</h4>
         </div>
       </Link>
-      {pathname !== "/cart" && (
+      {pathname !== "/cart" && pathname !== "/cart/order" ? (
         <>
           <Search />
           <Cart />
         </>
+      ) : (
+        <></>
       )}
     </div>
   );

@@ -1,8 +1,11 @@
 import React from "react";
 import ContentLoader from "react-content-loader";
 
+import "./item-scelet.css";
+
 const ItemScelet = (props) => (
   <ContentLoader
+    className="item-scelet"
     speed={2}
     width={1000}
     height={221.03}

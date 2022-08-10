@@ -5,7 +5,6 @@ import { setCategory } from "../../redux/slices/categorySlice";
 import "./categories.css";
 import { Sort } from "../sort/Sort";
 import { Link } from "react-router-dom";
-import { Container } from "@mui/system";
 
 export const Categories = () => {
   const category = [

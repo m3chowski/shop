@@ -11,8 +11,8 @@
 }
 
 .cart-page-nav {
-  margin-top: 35px;
-  margin-left: 15px;
+  padding-top: 35px;
+  padding-left: 15px;
   display: grid;
-  grid-template-columns: 1180px 530px 100px;
+  grid-template-columns: 1180px 415px 100px;
 }
