@@ -1,6 +1,6 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import { createTheme, ThemeProvider } from "@mui/material";
+import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import { Header } from "./components/header";
 import { Home } from "./pages/home";
 import { CartPage } from "./pages/cart";
@@ -22,8 +22,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/:category" element={<Home />} />
-            <Route path="item/:id" element={<ItemPage />} />
-            <Route path="cart" element={<CartPage />} />
+            <Route path="/item/:id" element={<ItemPage />} />
+            <Route path="/cart" element={<CartPage />} />
             <Route path="/cart/order" element={<Order />} />
             <Route path="*" element={<Navigate to={"/all"} replace />} />
           </Routes>

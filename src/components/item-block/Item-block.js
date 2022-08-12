@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
-
 import { useDispatch } from "react-redux";
 import { increasedCartCount } from "../../redux/slices/cartSlice";
+
 import "./item-block.css";
 
 export const ItemBlock = ({ image, title, price, id }) => {
   const dispatch = useDispatch();
+  const [addedToCart, setAddedToCart] = useState(false);
+
   const onClickAddToCart = () => {
     const item = {
       id,
@@ -16,6 +18,7 @@ export const ItemBlock = ({ image, title, price, id }) => {
       price,
     };
     dispatch(increasedCartCount(item));
+    setAddedToCart(true);
   };
 
   return (
@@ -27,10 +30,15 @@ export const ItemBlock = ({ image, title, price, id }) => {
           <p>{price} USD</p>
         </Link>
       </div>
-
       <div className="item-block-button">
         <div>
-          <Button onClick={() => onClickAddToCart()}>add cart</Button>
+          {addedToCart ? (
+            <Link to="cart">
+              <Button>go to cart</Button>
+            </Link>
+          ) : (
+            <Button onClick={() => onClickAddToCart()}>add cart</Button>
+          )}
         </div>
       </div>
     </div>

@@ -1,11 +1,12 @@
-import { Button } from "@mui/material";
 import React from "react";
+import { Button } from "@mui/material";
 import { useSelector } from "react-redux";
+
 import "./order-items.css";
 
 export const OrderItems = () => {
   const { cartItems, totalPrice } = useSelector((state) => state.cart);
-  console.log(cartItems);
+
   return (
     <div>
       <div className="order-main">
@@ -19,14 +20,14 @@ export const OrderItems = () => {
               <span>
                 {count} x {price} USD
               </span>
-              <span> total price: {(price * count).toFixed(1)} </span>
+              <span> total price: {(price * count).toFixed(2)} </span>
               <span>USD</span>
             </div>
           </div>
         ))}
       </div>
       <div className="order-total-price">
-        <span> Total price: {totalPrice.toFixed(1)} USD</span>
+        <span> Total price: {totalPrice.toFixed(2)} USD</span>
         <Button sx={{ color: "white", outline: "auto", background: "#808080" }}>
           Confirm order
         </Button>

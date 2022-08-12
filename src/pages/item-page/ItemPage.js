@@ -1,8 +1,8 @@
-import axios from "axios";
-import { Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { Button } from "@mui/material";
+import axios from "axios";
 import { increasedCartCount } from "../../redux/slices/cartSlice";
 import ItemScelet from "./Item-Scelet";
 
@@ -22,7 +22,7 @@ export const ItemPage = () => {
     `
       )
       .then((res) => setItem(res.data));
-  }, []);
+  }, [id]);
 
   const onClickAddToCart = () => {
     const item = {

@@ -1,12 +1,13 @@
 import React from "react";
-import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import { setSort } from "../../redux/slices/categorySlice";
 import "./sort.css";
 
 export const Sort = () => {
   const { activeSort } = useSelector((state) => state.category);
   const dispatch = useDispatch();
+
   const handleClick = (event) => {
     dispatch(setSort(event.target.value));
   };

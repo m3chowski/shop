@@ -8,6 +8,7 @@ import "./cart.css";
 
 export const Cart = () => {
   const { totalPrice, cartItems } = useSelector((state) => state.cart);
+
   return (
     <Link to="cart">
       <Box className="cart">

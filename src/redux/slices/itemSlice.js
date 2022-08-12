@@ -18,11 +18,12 @@ export const fetchItems = createAsyncThunk(
     return data;
   }
 );
+
 const itemsSlice = createSlice({
   name: "items",
   initialState,
   reducers: {
-    isLoading(state, action) {
+    isLoading: (state, action) => {
       state.loading = action.payload;
     },
   },

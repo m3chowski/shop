@@ -27,7 +27,7 @@
   position: sticky;
   margin-left: 70px;
   display: grid;
-  grid-template-columns: 150px 130px 1px;
+  grid-template-columns: 150px 137px 1px;
 }
 
 .order-total-price {

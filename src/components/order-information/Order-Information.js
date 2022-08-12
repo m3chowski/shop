@@ -8,23 +8,17 @@ import {
   Select,
   TextField,
 } from "@mui/material";
+
 import "./order-information.css";
 
 export const OrderInformation = () => {
   const delivery = ["delivery", "pickup"];
-  const personalData = ["First name", "Last name", "Email", "Mobile number"];
-  const deliveryInfo = [
-    "Country",
-    "Address",
-    "Postal code",
-    "District",
-    "Province",
-  ];
   const pickupPoint = ["first pickup", "second pickup"];
   const paymentMethod = ["card payment", "cash payment"];
 
   const [activeDelivery, setActiveDelivery] = useState("delivery");
   const [activePaymentMethod, setActivePaymentMethod] = useState("");
+
   return (
     <div className="order">
       <div className="order-delivery">
@@ -46,16 +40,18 @@ export const OrderInformation = () => {
         </ButtonGroup>
       </div>
       <div className="order-name">
-        {personalData.map((title) => (
-          <TextField label={title} />
-        ))}
+        <TextField label="First name" />
+        <TextField label="Last name" />
+        <TextField label="Email" />
+        <TextField label="Mobile number" />
       </div>
       <div className="order-delivery-address">
         {activeDelivery !== "pickup" ? (
           <div className="order-name">
-            {deliveryInfo.map((title) => (
-              <TextField label={title} />
-            ))}
+            <TextField label="Country" />
+            <TextField label="Address" />
+            <TextField label="Postal code" />
+            <TextField label="District" />
           </div>
         ) : (
           <FormControl fullWidth>

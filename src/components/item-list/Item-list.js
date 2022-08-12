@@ -9,6 +9,7 @@ import "./item-list.css";
 export const ItemList = () => {
   const dispatch = useDispatch();
   const { loading } = useSelector((state) => state.items);
+  const { items } = useSelector((state) => state.items);
   const { activeCategory, activeSort, searchValue } = useSelector(
     (state) => state.category
   );
@@ -17,7 +18,6 @@ export const ItemList = () => {
     dispatch(fetchItems({ activeCategory, searchValue, activeSort }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeCategory, activeSort, searchValue]);
-  const { items } = useSelector((state) => state.items);
 
   return (
     <div className="item-list">

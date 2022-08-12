@@ -1,6 +1,6 @@
-import { Button } from "@mui/material";
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { CartItem } from "../../components/cart-item";
 import { clearCart } from "../../redux/slices/cartSlice";
@@ -11,7 +11,6 @@ import "./cart-page.css";
 export const CartPage = () => {
   const { cartItems, totalPrice } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-  console.log(cartItems.length !== 0);
 
   return cartItems.length !== 0 ? (
     <div className="cart-page">
