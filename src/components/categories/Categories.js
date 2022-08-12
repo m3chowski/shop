@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonCategory } from "../Button-Category";
+import { ButtonCategory } from "../button-category";
 import { Sort } from "../sort";
 
 import "./categories.css";
