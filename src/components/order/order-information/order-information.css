@@ -1,0 +1,31 @@
+.order {
+  margin-top: 50px;
+  margin-left: 450px;
+  padding: 20px;
+  width: 420px;
+  /* outline: auto; */
+}
+
+.order-delivery {
+  width: 419px;
+}
+
+.order-delivery-address {
+  width: 420px;
+  height: 180px;
+  margin-top: 10px;
+}
+
+.order-name {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 63px 63px;
+}
+
+.order-payment-method {
+  position: sticky;
+  z-index: -10px;
+  width: 420px;
+  margin-top: 10px;
+}

@@ -1,0 +1,24 @@
+.cart-item {
+  display: grid;
+  grid-template-columns: 100px 800px 350px 335px 1px;
+  margin-top: 10px;
+  margin-left: 25px;
+}
+.cart-item-count {
+  display: grid;
+  grid-template-columns: 65px 10px 10px;
+}
+.cart-item-count button {
+  font-size: 20px;
+  outline: none;
+  border-radius: 999px;
+  margin-top: 13px;
+  height: 25px;
+  width: 25px;
+}
+.cart-item-delete {
+  margin-top: 13px;
+}
+.cart-item-img img {
+  width: 50%;
+}

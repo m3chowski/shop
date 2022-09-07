@@ -1,0 +1,9 @@
+.emptycart {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.emptycart button {
+  color: #ffffff;
+  border: 3px solid #808080;
+}
