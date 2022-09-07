@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { Button } from "@mui/material";
-import axios from "axios";
 import { increasedCartCount } from "../../redux/slices/cartSlice";
 import ItemScelet from "./Item-Scelet";
 

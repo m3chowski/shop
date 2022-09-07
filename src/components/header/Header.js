@@ -1,11 +1,11 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Cart } from "../cart";
-import { Search } from "../search";
+import { Cart } from "./cart";
+import { Search } from "./search";
 
 import "./header.css";
 
-export const Header = () => {
+export const Header = memo(() => {
   const { pathname } = useLocation();
 
   return (
@@ -25,4 +25,4 @@ export const Header = () => {
       )}
     </div>
   );
-};
+});

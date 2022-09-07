@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { Categories } from "../../components/categories";
-import { ItemList } from "../../components/item-list";
+import { ItemList } from "../../components/items/item-list";
 import { setCategory } from "../../redux/slices/categorySlice";
 import "./home.css";
 

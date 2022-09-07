@@ -2,9 +2,9 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-import { CartItem } from "../../components/cart-item";
+import { CartItem } from "../../components/cart/cart-item";
+import { EmptyCart } from "../../components/cart/cart-empty";
 import { clearCart } from "../../redux/slices/cartSlice";
-import { EmptyCart } from "../../components/cart-empty";
 
 import "./cart-page.css";
 
